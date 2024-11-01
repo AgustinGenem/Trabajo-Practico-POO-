@@ -31,9 +31,10 @@ def main():
     matriz = Matriz()
 
     while True:
-        fila = (input("Ingrese la fila (ingrese 'FIN' para terminar): "))
-        if fila == "FIN":
+        fila_input = (input("Ingrese la fila (ingrese 'FIN' para terminar): "))
+        if fila_input == "FIN":
             break
+        fila = int(fila_input)
         columna = int(input("Ingrese la columna: "))
         valor = input ("Ingrese el valor:  ")
 
