@@ -20,12 +20,15 @@ class CargaNotas:
             catedra = input("Ingrese la catedra (o 'FIN' para terminar): ")
             if catedra == "FIN":
                 if not alumno.notas:
-                    print("Debe ingresar al menos una nota.")
+                    print("Debe ingresar al menos una catedra.")
                     continue
                 break
-            notaExamen = float(input("Ingrese la nota del examen: "))
-            nota = Nota(catedra, notaExamen)
-            alumno.AgregarNotas(nota)
+            try:
+                notaExamen = float(input("Ingrese la nota del examen: "))
+                nota = Nota(catedra, notaExamen)
+                alumno.AgregarNotas(nota)
+            except ValueError:
+                print("Ingrese al menos una nota")
 
     def mostrar_informacion(self):
         for alumno in self.alumnos:

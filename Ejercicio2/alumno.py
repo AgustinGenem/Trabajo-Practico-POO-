@@ -1,5 +1,3 @@
-from nota import Nota
-
 class Alumno:
     def __init__(self, nombreCompleto, legajo):
         self.nombre = nombreCompleto
@@ -17,5 +15,5 @@ class Alumno:
         return total / len(self.notas)
     
     def __repr__(self):
-        return (f"Nombre: {self.nombre}, Legajo: {self.legajo}, Nota: {self.notas}, Promedio = {self.CalcularPromedio()}")
+        return (f"\n Nombre: {self.nombre}, \n Legajo: {self.legajo}, \n Nota: {self.notas}, \n Promedio = {self.CalcularPromedio()}")
 
